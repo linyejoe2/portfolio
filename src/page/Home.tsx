@@ -15,9 +15,9 @@ import { useTranslation } from 'react-i18next'
 
 export default function Home() {
   const { t, i18n } = useTranslation()
-  return (<Container sx={{ paddingTop: "" }}>
-    <Grid container spacing={2}>
-      <Grid xs={12} md={7} sx={{ paddingLeft: "62px", paddingTop: '80px', '@media (max-width: 900px)': { paddingTop: "100px", paddingRight: "0", paddingLeft: "62px" } }}>
+  return (<Container>
+    <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
+      <Grid xs={12} md={7} sx={{ px: { xs: 3, md: 8 }, pt: { xs: 4, md: 8 } }}>
         <h1>{t('main.banner.1')}</h1>
         <h1>{t('main.banner.2')}<HiLighter>{t('main.banner.3')}</HiLighter> </h1>
         {/* <Typography variant='h2'>
@@ -28,13 +28,12 @@ export default function Home() {
       <Grid xs={12} md={5}>
         <img src={HomeMain} alt="HomeMain" style={{ height: "auto", maxWidth: "100%" }} />
       </Grid>
-      <Grid md={12} sx={{ height: "100px", '@media (max-width: 900px)': { display: 'none' } }}></Grid>
       {/* <Grid xs={12} md={12}> */}
-      <Grid xs={12} md={4} sx={{ padding: "35px", margin: "auto", display: "flex", justifyContent: "center", '@media (max-width: 900px)': { order: 2 } }}>
-        <img src={avatar} alt="HomeMain" style={{ height: "auto", maxWidth: "80%", borderRadius: "500px" }} />
+      <Grid xs={12} md={4} sx={{ mt: { xs: 0, md: 12 }, p: { xs: 2, md: 4 }, display: "flex", justifyContent: "center", order: { xs: 2, md: 0 } }}>
+        <img src={avatar} alt="avatar" style={{ height: "auto", width: "100%", maxWidth: "280px", borderRadius: "50%" }} />
       </Grid>
-      <Grid display={i18n.language == "en" ? "block" : "none"} xs={12} md={8} sx={{ paddingLeft: "62px", '@media (max-width: 900px)': { padding: "80px", order: 1 } }}>
-        <h1 style={{ textTransform: 'uppercase', textAlign: "center", marginBottom: "50px" }}>Allow me to <HiLighter>introduce</HiLighter> myself</h1>
+      <Grid display={i18n.language == "en" ? "block" : "none"} xs={12} md={8} sx={{ mt: { xs: 0, md: 12 }, px: { xs: 3, md: 6 }, py: { xs: 2, md: 0 }, order: { xs: 1, md: 0 } }}>
+        <h1 style={{ textTransform: 'uppercase', textAlign: "center", marginBottom: "32px" }}>Allow me to <HiLighter>introduce</HiLighter> myself</h1>
         <p style={{ fontSize: "20px" }}>
           I like programming, and I also like to <HiLighter>create useful programs</HiLighter> to help users.
           <br /><br />
@@ -47,8 +46,8 @@ export default function Home() {
           If you happen to be looking for someone proficient in <HiLighter>TypeScript, React</HiLighter>, or if you are looking for a <HiLighter>fast learner</HiLighter> and a <HiLighter>team player</HiLighter>, please feel free to <HiLighter>reach out</HiLighter> to me.
         </p>
       </Grid>
-      <Grid display={i18n.language == "en" ? "none" : "block"} xs={12} md={8} sx={{ paddingLeft: "62px", '@media (max-width: 900px)': { padding: "80px", order: 1 } }}>
-        <h1 style={{ textTransform: 'uppercase', textAlign: "center", marginBottom: "50px" }}>請讓我 <HiLighter>介紹</HiLighter> 我自己！</h1>
+      <Grid display={i18n.language == "en" ? "none" : "block"} xs={12} md={8} sx={{ mt: { xs: 0, md: 12 }, px: { xs: 3, md: 6 }, py: { xs: 2, md: 0 }, order: { xs: 1, md: 0 } }}>
+        <h1 style={{ textTransform: 'uppercase', textAlign: "center", marginBottom: "32px" }}>請讓我 <HiLighter>介紹</HiLighter> 我自己！</h1>
         <p style={{ fontSize: "20px" }}>
           我喜歡撰寫程式碼，而且我也喜歡 <HiLighter>創造有用的程式</HiLighter> 來幫助使用者解決問題。
           <br /><br />
@@ -62,7 +61,7 @@ export default function Home() {
         </p>
       </Grid>
       {/* </Grid> */}
-      <Grid xs={12} md={12} sx={{ '@media (max-width: 900px)': { order: 3 } }}>
+      <Grid xs={12} md={12} sx={{ order: { xs: 3, md: 0 } }}>
         <h1 style={{ textAlign: "center", margin: "50px auto 10px auto" }}> <HiLighter>{t('main.contact.1')}</HiLighter>{t('main.contact.2')}</h1>
         <Box sx={{ display: 'flex', justifyContent: "center" }}>
           <Stack direction="row" spacing={1}>

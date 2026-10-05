@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Norms
+
+Read `norm/00-manifest.md` (and the files it lists) before starting work, and reply with its handshake sentence. Norms apply to newly added code only; do not refactor existing code to match them. After changes, update `README.md`, `ChangeLog.md` and this file as described in `norm/05-update-document.md` (check `git status` and `git diff` first).
+
 ## Overview
 
 Personal portfolio SPA (React 18 + TypeScript + Vite 4, MUI 5, Redux Toolkit, react-i18next). No test framework is configured.
@@ -22,6 +26,7 @@ Personal portfolio SPA (React 18 + TypeScript + Vite 4, MUI 5, Redux Toolkit, re
 - i18n: `src/i18n.ts` loads translations at runtime over HTTP from `public/locales/{en,zh-TW}/translation.json` (relative path `./locales/...`). Fallback language is `en`. Add every UI string to both files.
 - `src/service/CONST.ts`: `BASE` (from Vite base URL) and `DEV` (`VITE_DEV_MODE`). When `VITE_DEV_MODE=true` (set in `.env`, currently commented out) the `Loading` overlay is skipped.
 - Project cards on the Projects page come from `src/assets/projects.json`.
+- Layout spacing uses MUI `sx` breakpoint objects (`{ xs, md }`) rather than `@media` blocks; keep theme colors/fonts in `src/theme.ts`.
 - Static assets (fonts, `canvas.js` background animation, locales) are in `public/`.
 
 ## Deployment

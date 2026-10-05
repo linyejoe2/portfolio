@@ -343,7 +343,8 @@ const Item = (props: p2) => {
       borderRadius="15px"
       sx={{
         backgroundColor: "background.default",
-        height: "530px",
+        height: { xs: "auto", sm: "530px" },
+        minHeight: "480px",
       }} p={2}>
       {props.children}
       <Box>
@@ -371,9 +372,9 @@ export default function Projects() {
     <Container >
       <Box sx={{
         flexGrow: 1,
-        padding: '50px'
+        padding: { xs: '16px', sm: '32px', md: '50px' }
       }}>
-        <Grid container spacing={6}>
+        <Grid container spacing={{ xs: 3, md: 6 }}>
           {projects.map(ele => (
             <Grid xs={12} sm={6} md={4}>
               <Item project={ele}></Item>

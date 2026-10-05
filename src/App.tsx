@@ -26,7 +26,7 @@ export default function MyApp() {
           bgcolor={purple}
           sx={{
             height: "60px",
-            marginTop: "100px",
+            marginTop: "64px",
             display: 'flex',
             justifyContent: "center",
             alignItems: "center",

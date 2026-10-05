@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site built with React 18, TypeScript, Vite, MUI, Redux Toolkit and react-i18next (English and Traditional Chinese).
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 16+ and npm
+- Docker (optional, for `develop.bat`)
 
-## Expanding the ESLint configuration
+## Environment
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+| Variable | Description |
+| --- | --- |
+| `VITE_DEV_MODE` | Set to `true` to skip the loading overlay during development. |
 
-- Configure the top-level `parserOptions` property like this:
+## Scripts
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Vite dev server (served under `/portfolio/`). |
+| `npm run build` | Type-check and build for GitHub Pages (base `/portfolio/`). |
+| `npm run build-local` | Type-check and build with base `/` (used by Docker). |
+| `npm run lint` / `npm run lint-fix` | ESLint on `src`. |
+| `develop.bat` | Build and run with Docker at http://localhost:5183. Use `develop.bat stop` or `develop.bat logs`. |
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Architecture
+
+- `src/page/` — Home, About, Projects and error pages (hash router, see `src/Router.tsx`).
+- `src/components/` — navigation bar, loading/welcome animations and shared helpers.
+- `src/service/` — Redux store, constants and shared types.
+- `src/assets/projects.json` — project data.
+- `public/locales/{en,zh-TW}/` — translation files loaded at runtime.
+
+## Deployment
+
+Pushes to `main` run `.github/deploy.sh` through GitHub Actions, which builds the site and publishes `dist` to the `release` branch.
