@@ -1,0 +1,33 @@
+{
+  "main": {
+    "banner": {
+      "1": "Hi There!",
+      "2": "I'm ",
+      "3": "Randy Lin",
+      "4": "A "
+    },
+    "typeWriter": {
+      "1": "Software Developer",
+      "2": "Full-stack Developer"
+    },
+    "contact": {
+      "1": "Contact ",
+      "2": "Me"
+    }
+  },
+  "topNav": {
+    "Home": "Home",
+    "About": "About",
+    "Projects": "Projects",
+    "Resume": "Resume",
+    "Blogs": "Blogs",
+    "Setting": "Setting",
+    "Menu": "Menu",
+    "Mode": "Mode",
+    "Light": "Light",
+    "Dark": "Dark",
+    "Langauge": "Langauge",
+    "English": "English",
+    "Traditional Chinese": "Traditional Chinese"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "main": {
+    "banner": {
+      "1": "你好～" ,
+      "2": "我是 ",
+      "3": "Randy Lin",
+      "4": "一個 "
+    },
+    "typeWriter": {
+      "1": "程式設計師",
+      "2": "全端工程師"
+    },
+    "contact": {
+      "1": "聯絡資訊",
+      "2": ""
+    }
+  },
+  "topNav": {
+    "Home": "首頁",
+    "About" : "關於我" ,
+    "Projects": "作品集",
+    "Resume": "簡歷",
+    "Blogs": "部落格",
+    "Setting": "設定",
+    "Menu": "選單",
+    "Mode": "白天/夜晚",
+    "Light": "白天",
+    "Dark": "夜晚",
+    "Langauge": "語言",
+    "English": "英文",
+    "Traditional Chinese": "繁體中文"
+  }
+}
